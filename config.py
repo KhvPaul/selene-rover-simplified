@@ -28,10 +28,10 @@ class Settings(BaseSettings):  # TODO: clean up
 
     # database
     POSTGRES_USER: str = "postgres"
-    POSTGRES_PASSWORD: str = "postgres"
-    POSTGRES_HOST: str = "postgres"
+    POSTGRES_PASSWORD: str = "admin"
+    POSTGRES_HOST: str = "database"
     POSTGRES_PORT: int = 5432
-    POSTGRES_DB: str = "postgres"
+    POSTGRES_DB: str = "selene-drive"
     DATABASE_ENDPOINT: PostgresDsn | None = None
     ASYNC_DATABASE_ENDPOINT: PostgresDsn | None = None
 

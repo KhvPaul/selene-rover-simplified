@@ -80,7 +80,7 @@ def run_command(command: CommandSchema, session: Session = Depends(get_session))
         if (new_state["longitude"], new_state["latitude"]) in settings.INITIAL_OBSTACLES:
             logger.info(
                 f"Rover({rover_state.longitude}, {rover_state.latitude} runs into an obstacle "
-                f"({new_state["longitude"], new_state["latitude"]})"
+                f"({new_state['longitude'], new_state['latitude']})"
             )
             break
         rover_state.longitude = new_state["longitude"]
