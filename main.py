@@ -88,4 +88,6 @@ def run_command(command: CommandSchema, session: Session = Depends(get_session))
         rover_state.direction = new_state["direction"]
     session.add(command_input)
     session.add(rover_state)
+    session.commit()
+    session.refresh(rover_state)
     return rover_state
